@@ -1,0 +1,9 @@
+{
+  "source": "earthripper_google_earth_pro",
+  "center_lat": 52.596864,
+  "center_lon": -1.141572,
+  "ground_w_m": 530.3,
+  "ground_h_m": 276.0,
+  "source_px": [8192, 4262],
+  "output_px": [8192, 4096]
+}

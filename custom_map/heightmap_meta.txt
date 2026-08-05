@@ -1,0 +1,5 @@
+min_m=73.000
+max_m=86.000
+range_m=13.000
+box_m=400.0
+target_px=512

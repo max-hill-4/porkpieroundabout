@@ -236,12 +236,11 @@ export class World
 
 	public isOutOfBounds(position: CANNON.Vec3): boolean
 	{
-		let inside = position.x > -211.882 && position.x < 211.882 &&
-					position.z > -169.098 && position.z < 153.232 &&
-					position.y > 0.107;
-		let belowSeaLevel = position.y < 14.989;
-
-		return !inside && belowSeaLevel;
+		// Disabled: original demo bounds don't apply to custom scenes with
+		// captured-model terrain at arbitrary Y. Without this, the car
+		// respawns constantly when driving on road that's below the demo's
+		// sea level (Y=14.989).
+		return false;
 	}
 
 	public outOfBoundsRespawn(body: CANNON.Body, position?: CANNON.Vec3): void
