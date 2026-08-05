@@ -5,6 +5,29 @@
 	<br>
 </p>
 
+# About this fork
+
+Quick sim of the Pork Pie roundabout (Hinckley, UK). Full credit for the
+engine goes to Jan Blaha's [Sketchbook](https://jblaha.art/sketchbook/latest)
+— this is just a fork with a custom scenario.
+
+What I did:
+- Ripped the 3D model GLB off Google Earth Pro (via RenderDoc) for the
+  roundabout and surrounding buildings.
+- Captured satellite imagery via EarthRipper and used it as the ground
+  texture in earlier iterations.
+- Generated a heightmap collision floor from the model's geometry so the
+  car drives on terrain that follows the actual road elevation instead
+  of a flat plane. Sampled on a 10m grid, taking the top of the lowest 1m
+  of geometry per cell so the car sits on the road surface.
+- Patched `World.ts` to disable the demo's out-of-bounds respawn (the
+  captured terrain is below the demo's hardcoded sea level).
+
+Build scripts are in `custom_map/`. The captured 3D model is imported as
+render-only geometry; the heightmap is a single trimesh collider.
+
+---
+
 # Final update (20. Feb 2023)
 
 As I have no more interest in developing this project, it comes to a conclusion. In order to remain honest about the true state of the project, I am archiving this repository.
